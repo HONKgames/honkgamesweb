@@ -2,6 +2,7 @@ import {OrbitControls} from '@react-three/drei'
 import {Canvas} from '@react-three/fiber'
 import {Suspense} from 'react'
 import Room from './scene/Room'
+import TV from './scene/TV'
 
 export default function App()
 {
@@ -14,6 +15,7 @@ export default function App()
       <directionalLight position={[-4, 1.6, 0]} intensity={0.8} color="#ff8400"/> {/*window light*/}
       <Suspense fallback={null}>
         <Room />
+        <TV />
       </Suspense>
       <OrbitControls target={[0, 1.2, 0]} enablePan={false} enableZoom={false} minPolarAngle={Math.PI/3} maxPolarAngle={(Math.PI * 2)/3}/>
     </Canvas>
