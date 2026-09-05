@@ -8,10 +8,10 @@ export default function App()
   return(
     <Canvas camera={{position: [0, 1.2, 1.5], fov: 60}} dpr = {[1, 2]}>
       <ambientLight intensity={0.15}/>
-      <color attach="background" args={['#1a2740']} />
-      <pointLight position={[-1.2, 1.0, -1.2]} intensity={8} distance={6} decay={2} color="#ffb86b"/> {/*lamp*/}
-      <pointLight position={[0, 2.3, 0]} intensity={5} distance={8} decay={2} color="#ffd9a0"/> {/*ceiling light*/}
-      <directionalLight position={[-4, 1.6, 0]} intensity={0.4} color="#6b8cff"/>
+      <color attach="background" args={['#c17324']} />
+      <pointLight position={[1.2, 1.0, -1.2]} intensity={5} distance={6} decay={2} color="#ffb86b"/> {/*lamp*/}
+      <pointLight position={[0, 2.3, 0]} intensity={3} distance={8} decay={2} color="#ffd9a0"/> {/*ceiling light*/}
+      <directionalLight position={[-4, 1.6, 0]} intensity={0.8} color="#ff8400"/> {/*window light*/}
       <Suspense fallback={null}>
         <Room />
       </Suspense>
